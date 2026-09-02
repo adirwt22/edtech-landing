@@ -1,44 +1,67 @@
-export default function About() {
+import React from "react";
+
+const VisionMission: React.FC = () => {
   return (
-    <section className="about section" id="about">
-      <div className="container">
-        <div className="sectionBadge">
-          About Us
+    <section className="vision-mission-section" id="vision-mission">
+      <div className="vision-mission-container">
+
+        <div className="vision-mission-heading">
+          <span className="section-badge">Our Purpose</span>
+
+          <h2>
+            Vision & <span>Mission</span>
+          </h2>
+
+          <p>
+            We are committed to creating a smarter and more accessible
+            learning environment where every learner can grow, improve,
+            and achieve their goals.
+          </p>
         </div>
 
-        <h2>
-          Built for learners who
-          <br />
-          <span>want to move forward.</span>
-        </h2>
+        <div className="vision-mission-grid">
 
-        <p className="lead">
-          Our goal is simple: make high-quality learning
-          accessible, practical, and engaging for everyone.
-        </p>
+          {/* Vision */}
+          <div className="vision-mission-card">
+            <div className="vm-icon">
+              👁️
+            </div>
 
-        <div className="stats">
-          <div>
-            <strong>10K+</strong>
-            <span>Learners</span>
+            <div>
+              <h3>Our Vision</h3>
+
+              <p>
+                To become a trusted learning platform that empowers
+                students and professionals with quality education,
+                practical knowledge, and the skills needed to succeed
+                in a rapidly changing world.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <strong>100+</strong>
-            <span>Courses</span>
+          {/* Mission */}
+          <div className="vision-mission-card">
+            <div className="vm-icon">
+              🎯
+            </div>
+
+            <div>
+              <h3>Our Mission</h3>
+
+              <p>
+                Our mission is to provide engaging courses, expert
+                guidance, practical resources, and a learner-focused
+                experience that makes education simple, effective,
+                and accessible to everyone.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <strong>50+</strong>
-            <span>Expert Mentors</span>
-          </div>
-
-          <div>
-            <strong>95%</strong>
-            <span>Positive Reviews</span>
-          </div>
         </div>
+
       </div>
     </section>
   );
-}
+};
+
+export default VisionMission;
