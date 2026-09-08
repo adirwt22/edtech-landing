@@ -1,18 +1,23 @@
-import { ArrowRight, GraduationCap, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/sutra-edu-logo.svg";
 
 function Logo() {
   return (
-    <div className="logo">
-      <div className="logoIcon">
-        <GraduationCap size={25} />
-      </div>
+    <a href="#home" className="logo" aria-label="Sutra Edu">
+      <img
+        src={logo}
+        alt="Sutra Edu"
+        className="logoImage"
+      />
 
-      <div>
-        <strong>EdTech</strong>
-        <span>Learn Anytime, Anywhere.</span>
+      <div className="logoText">
+        <strong>
+          Sutra <span>Edu</span>
+        </strong>
+        <small>Learn Anytime, Anywhere.</small>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -25,8 +30,10 @@ export default function Header() {
 
   return (
     <header className="header container">
+      {/* Logo */}
       <Logo />
 
+      {/* Desktop / Mobile Navigation */}
       <nav className={menu ? "nav active" : "nav"}>
         <a href="#home" onClick={closeMenu}>
           Home
@@ -49,17 +56,24 @@ export default function Header() {
         </a>
       </nav>
 
-      <a href="#contact" className="button smallButton">
+      {/* Desktop CTA */}
+      <a
+        href="#contact"
+        className="button smallButton headerCTA"
+        onClick={closeMenu}
+      >
         Get Started
-        <ArrowRight size={15} />
+        <ArrowRight size={16} />
       </a>
 
+      {/* Mobile Menu Button */}
       <button
         className="menuButton"
         onClick={() => setMenu(!menu)}
-        aria-label="Toggle menu"
+        aria-label={menu ? "Close menu" : "Open menu"}
+        aria-expanded={menu}
       >
-        {menu ? <X size={24} /> : <Menu size={24} />}
+        {menu ? <X size={25} /> : <Menu size={25} />}
       </button>
     </header>
   );

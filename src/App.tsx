@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Features from "./components/Features";
+import DownloadApp from "./components/DownloadApp";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Footer from "./components/Footer";
@@ -12,8 +12,11 @@ function App() {
 
       <main>
         <Hero />
-        <Features />
+
+        <DownloadApp />
+
         <About />
+
         <VisionMission />
       </main>
 

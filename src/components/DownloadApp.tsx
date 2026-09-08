@@ -1,9 +1,12 @@
-import { Bell, GraduationCap, ShieldCheck } from "lucide-react";
+import { Bell, ShieldCheck } from "lucide-react";
+import logo from "../assets/sutra-edu-logo.svg";
 
 export default function DownloadApp() {
   return (
     <section className="download section">
       <div className="container downloadGrid">
+
+        {/* Left Content */}
         <div>
           <div className="sectionBadge">
             Stay Tuned
@@ -21,7 +24,7 @@ export default function DownloadApp() {
           </p>
 
           <div className="storeButtons">
-            <button>
+            <button type="button">
               <strong>▶</strong>
 
               <span>
@@ -30,7 +33,7 @@ export default function DownloadApp() {
               </span>
             </button>
 
-            <button>
+            <button type="button">
               <strong>●</strong>
 
               <span>
@@ -41,31 +44,31 @@ export default function DownloadApp() {
           </div>
         </div>
 
+        {/* Phone */}
         <div className="downloadPhone">
           <div className="simplePhone">
             <div className="notch" />
 
             <div className="appLogo">
-              <GraduationCap size={45} />
-
-              <b>EdTech</b>
-
-              <small>
-                Learn Anytime,
-                <br />
-                Anywhere.
-              </small>
+              <img
+                src={logo}
+                alt="Sutra Edu"
+                className="downloadAppLogo"
+              />
             </div>
           </div>
 
+          {/* Floating Bell */}
           <div className="downloadBubble bubbleOne">
             <Bell size={18} />
           </div>
 
+          {/* Floating Shield */}
           <div className="downloadBubble bubbleTwo">
             <ShieldCheck size={18} />
           </div>
         </div>
+
       </div>
     </section>
   );

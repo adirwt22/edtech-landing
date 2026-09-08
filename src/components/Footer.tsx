@@ -1,17 +1,23 @@
-import { GraduationCap } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import logo from "../assets/sutra-edu-logo.svg";
 
 function FooterLogo() {
   return (
-    <div className="logo">
-      <div className="logoIcon">
-        <GraduationCap size={22} />
-      </div>
+    <a href="#home" className="footerLogo" aria-label="Sutra Edu Home">
+      <img
+        src={logo}
+        alt="Sutra Edu"
+        className="footerLogoImage"
+      />
 
-      <div>
-        <strong>EdTech</strong>
-        <span>Learn Anytime, Anywhere.</span>
+      <div className="footerLogoText">
+        <strong>
+          Sutra <span>Edu</span>
+        </strong>
+
+        <small>Learn Anytime, Anywhere.</small>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -19,7 +25,9 @@ export default function Footer() {
   return (
     <footer className="footer" id="contact">
       <div className="container footerGrid">
-        <div>
+
+        {/* Brand */}
+        <div className="footerBrand">
           <FooterLogo />
 
           <p>
@@ -29,14 +37,26 @@ export default function Footer() {
           </p>
 
           <div className="socials">
-            <span>f</span>
-            <span>𝕏</span>
-            <span>▶</span>
-            <span>in</span>
+            <a href="#" aria-label="Facebook">
+              f
+            </a>
+
+            <a href="#" aria-label="X">
+              𝕏
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              ▶
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              in
+            </a>
           </div>
         </div>
 
-        <div>
+        {/* Quick Links */}
+        <div className="footerColumn">
           <h4>Quick Links</h4>
 
           <a href="#home">Home</a>
@@ -46,7 +66,8 @@ export default function Footer() {
           <a href="#contact">Contact</a>
         </div>
 
-        <div>
+        {/* Support */}
+        <div className="footerColumn">
           <h4>Support</h4>
 
           <a href="#contact">Help Center</a>
@@ -55,21 +76,35 @@ export default function Footer() {
           <a href="#contact">Terms of Service</a>
         </div>
 
-        <div>
+        {/* Contact */}
+        <div className="footerColumn footerContact">
           <h4>Contact Us</h4>
 
-          <p>✉ hello@edtech.com</p>
-          <p>☎ +91 12345 67890</p>
+          <a href="mailto:hello@sutraedu.com">
+            <Mail size={13} />
+            <span>hello@sutraedu.com</span>
+          </a>
+
+          <a href="tel:+911234567890">
+            <Phone size={13} />
+            <span>+91 12345 67890</span>
+          </a>
+
           <p>
-            ⌖ 123 Education Street,
-            <br />
-            Learning City, India
+            <MapPin size={14} />
+            <span>
+              123 Education Street,
+              <br />
+              Learning City, India
+            </span>
           </p>
         </div>
+
       </div>
 
+      {/* Copyright */}
       <div className="copyright">
-        © 2026 EdTech. All rights reserved.
+        © 2026 Sutra Edu. All rights reserved.
       </div>
     </footer>
   );
