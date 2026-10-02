@@ -1,0 +1,204 @@
+/* ================= LEARNING JOURNEY ================= */
+
+.syllabus {
+  position: relative;
+  overflow: hidden;
+
+  padding: 120px 0;
+
+  background: #0f1117;
+}
+
+.syllabusIntro {
+  max-width: 760px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.syllabusIntro h2 {
+  margin: 22px 0 18px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 52px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.syllabusIntro h2 span {
+  color: var(--primary);
+}
+
+.syllabusIntro p {
+  max-width: 620px;
+  margin: 0 auto;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ================= JOURNEY ================= */
+
+.learningJourney {
+  max-width: 1100px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 75px auto 0;
+}
+
+.journeyItem {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 0 35px;
+}
+
+.journeyItem:first-child {
+  padding-left: 0;
+}
+
+.journeyItem:last-child {
+  padding-right: 0;
+}
+
+
+/* Number */
+
+.journeyNumber {
+  margin-bottom: 18px;
+
+  color: var(--primary);
+
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+/* Icon */
+
+.journeyIcon {
+  width: 54px;
+  height: 54px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  border-radius: 15px;
+
+  color: var(--primary);
+
+  background: rgba(108, 99, 255, 0.08);
+}
+
+
+/* Content */
+
+.journeyContent h3 {
+  margin: 0 0 10px;
+
+  color: #f1f2f8;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 19px;
+}
+
+.journeyContent p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+
+/* Connecting Line */
+
+.journeyLine {
+  position: absolute;
+
+  top: 28px;
+  right: -1px;
+
+  width: 70px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(108, 99, 255, 0.45),
+    rgba(108, 99, 255, 0)
+  );
+}
+
+
+/* ================= HOVER ================= */
+
+.journeyItem:hover .journeyIcon {
+  border-color: rgba(0, 217, 166, 0.4);
+
+  color: var(--accent);
+
+  background: rgba(0, 217, 166, 0.08);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .learningJourney {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .journeyItem,
+  .journeyItem:first-child,
+  .journeyItem:last-child {
+    min-height: auto;
+
+    padding: 0 0 45px;
+  }
+
+  .journeyLine {
+    top: auto;
+    bottom: 20px;
+    left: 27px;
+    right: auto;
+
+    width: 1px;
+    height: 25px;
+
+    background: linear-gradient(
+      180deg,
+      rgba(108, 99, 255, 0.45),
+      rgba(108, 99, 255, 0)
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  .syllabus {
+    padding: 85px 0;
+  }
+
+  .syllabusIntro h2 {
+    font-size: 38px;
+    letter-spacing: -1.2px;
+  }
+
+  .journeyItem {
+    padding-bottom: 40px;
+  }
+}

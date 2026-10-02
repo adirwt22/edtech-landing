@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
-
+@import "./styles/variables.css";
+@import "./styles/header.css";
+@import "./styles/hero.css";
+@import "./styles/features.css";
+@import "./styles/about.css";
+@import "./styles/academic.css";
+@import "./styles/board.css";
+@import "./styles/syllabus.css";
+@import "./styles/vision.css";
+@import "./styles/download.css";
+@import "./styles/footer.css";
+@import "./styles/responsive.css";
 :root {
   --primary: #6c63ff;
   --secondary: #945ff1;

@@ -1,0 +1,152 @@
+.footer {
+  background: #0a0c11;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 50px;
+  padding: 65px 0 45px;
+}
+
+/* ================= FOOTER BRAND ================= */
+
+.footerBrand {
+  min-width: 0;
+}
+
+.footerLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footerLogoImage {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
+.footerLogoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footerLogoText strong {
+  display: block;
+  color: #f4f4f8;
+  font-family: "Archivo", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.footerLogoText strong span {
+  color: #35d6c4;
+}
+
+.footerLogoText small {
+  display: block;
+  margin-top: 5px;
+  color: #9296a8;
+  font-size: 8px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ================= FOOTER COLUMNS ================= */
+
+.footerColumn h4 {
+  margin: 5px 0 18px;
+  color: #f1f2f8;
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+}
+
+.footerColumn > a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 11px 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footerColumn > a:hover {
+  color: white;
+}
+
+/* ================= CONTACT ================= */
+
+.footerContact > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footerContact > a svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footerContact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 11px 0;
+}
+
+.footerContact p svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ================= SOCIALS ================= */
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.socials a {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: #171b24;
+  color: #dfe2ef;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.socials a:hover {
+  color: white;
+  border-color: var(--primary);
+  background: rgba(108, 99, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+  padding: 18px;
+  border-top: 1px solid #1d2230;
+  color: #62697d;
+  text-align: center;
+  font-size: 10px;
+}

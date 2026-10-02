@@ -1,0 +1,66 @@
+/* ================= LEARNING FLOW ================= */
+
+.aboutBottom {
+  width: 100%;
+  max-width: 900px;
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 65px auto 0;
+  padding: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: rgba(23, 27, 36, 0.45);
+  overflow: hidden;
+}
+
+/* Learn / Practice / Grow */
+
+.aboutBottom span {
+  flex: 1;
+  text-align: center;
+
+  color: #dfe2ef;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.aboutBottom span:first-child {
+  color: var(--accent);
+}
+
+.aboutBottom span:last-child {
+  color: var(--primary);
+}
+
+/* Divider */
+
+.aboutLine {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 35px;
+
+  background: var(--border);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .aboutBottom {
+    min-height: 75px;
+  }
+
+  .aboutBottom span {
+    font-size: 11px;
+  }
+
+  .aboutLine {
+    height: 28px;
+  }
+}

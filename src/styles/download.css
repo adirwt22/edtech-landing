@@ -1,0 +1,170 @@
+/* ================= DOWNLOAD ================= */
+
+.download {
+  background:
+    linear-gradient(100deg,
+      #14182a,
+      #121520);
+
+  border-top: 1px solid #242b40;
+
+  border-bottom: 1px solid #242b40;
+}
+
+.downloadGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+}
+
+.downloadText {
+  max-width: 480px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.storeButtons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.storeButtons button {
+  width: 150px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #394054;
+
+  border-radius: 9px;
+
+  color: white;
+
+  background: #090b10;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.storeButtons button:hover {
+  border-color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+.storeButtons button>strong {
+  font-size: 18px;
+}
+
+.storeButtons button>span {
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.storeButtons small {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 7px;
+}
+
+.downloadPhone {
+  height: 400px;
+
+  position: relative;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.simplePhone {
+  width: 190px;
+  height: 370px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 2px solid #596073;
+
+  border-radius: 31px;
+
+  background: #090b10;
+
+  box-shadow:
+    0 0 80px rgba(108, 99, 255, 0.18);
+}
+
+/* ================= DOWNLOAD APP LOGO ================= */
+
+.appLogo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--primary);
+  padding: 35px 20px;
+}
+
+.downloadAppLogo {
+  width: 155px;
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.downloadBubble {
+  width: 42px;
+  height: 42px;
+
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(108, 99, 255, 0.4);
+
+  border-radius: 50%;
+
+  background:
+    rgba(108, 99, 255, 0.22);
+
+  color: white;
+}
+
+.bubbleOne {
+  right: 24%;
+  top: 22%;
+}
+
+.bubbleTwo {
+  left: 24%;
+  bottom: 22%;
+}
+
+/* ================= FOOTER ================= */

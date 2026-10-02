@@ -2,7 +2,7 @@ import { Sparkles, Target } from "lucide-react";
 
 export default function VisionMission() {
   return (
-    <section className="vision section" id="courses">
+    <section className="vision section" id="vision">
       <div className="container">
         <div className="sectionBadge center">
           Our Purpose
@@ -13,35 +13,45 @@ export default function VisionMission() {
         </h2>
 
         <div className="visionGrid">
+          {/* Mission */}
           <div className="glassCard">
             <div className="bigIcon">
               <Target />
             </div>
 
             <div>
-              <h3>Our Vision</h3>
+              <h3>Our Mission</h3>
+
+              <h4>Help Every Student Learn With Confidence.</h4>
 
               <p>
-                To become a global leader in online education,
-                empowering individuals to achieve their dreams
-                through accessible and innovative learning.
+                Make academic learning more accessible, personalized, and
+                effective—helping students understand their subjects, practice
+                consistently, recognize learning gaps, and move forward.
               </p>
             </div>
           </div>
 
+          {/* Vision */}
           <div className="glassCard">
             <div className="bigIcon tealIcon">
               <Sparkles />
             </div>
 
             <div>
-              <h3>Our Mission</h3>
+              <h3>Our Vision</h3>
+
+              <h4>A World Where Learning Opens More Doors.</h4>
 
               <p>
-                To provide high-quality, affordable, and flexible
-                learning solutions that help students and
-                professionals grow their skills and build better
-                futures.
+                Build strong foundations, discover interests, and develop the
+                confidence to navigate a changing world.
+              </p>
+
+              <p>
+                We want learning to become more responsive to individual
+                needs, while encouraging questions, practice, reflection, and
+                exploration.
               </p>
             </div>
           </div>

@@ -4,7 +4,10 @@ import DownloadApp from "./components/DownloadApp";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Footer from "./components/Footer";
-
+import "./App.css";
+import LearningSyllabus from "./components/LearningSyllabus";
+import BoardPreparation from "./components/BoardPreparation";
+import AcademicExperience from "./components/AcademicExperience";
 function App() {
   return (
     <div className="website">
@@ -16,6 +19,12 @@ function App() {
         <DownloadApp />
 
         <About />
+
+        <AcademicExperience />
+
+        <BoardPreparation />
+
+        <LearningSyllabus />
 
         <VisionMission />
       </main>

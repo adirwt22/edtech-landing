@@ -7,38 +7,40 @@ export default function About() {
         </div>
 
         <h2>
-          Built for learners who
+          We See Learning as a
           <br />
-          <span>want to move forward.</span>
+          <span>Connected Journey.</span>
         </h2>
 
         <p className="lead">
-          Our goal is simple: make high-quality learning
-          accessible, practical, and engaging for everyone.
+          Learning is more than completing a syllabus. It is about
+          understanding concepts, asking questions, practicing, and building
+          confidence along the way.
+        </p>
+
+        <p className="aboutText">
+          Sutra Edu brings academic learning, technology, practice, and
+          personalized support together in one connected learning experience.
         </p>
 
         <div className="stats">
           <div>
-            <strong>10K+</strong>
-            <span>Learners</span>
+            <strong>Learn</strong>
+            <span>Build strong foundations</span>
           </div>
 
           <div>
-            <strong>100+</strong>
-            <span>Courses</span>
+            <strong>Practice</strong>
+            <span>Strengthen understanding</span>
           </div>
 
           <div>
-            <strong>50+</strong>
-            <span>Expert Mentors</span>
-          </div>
-
-          <div>
-            <strong>95%</strong>
-            <span>Positive Reviews</span>
+            <strong>Grow</strong>
+            <span>Move forward with confidence</span>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
