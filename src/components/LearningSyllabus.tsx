@@ -1,23 +1,34 @@
-import { Lightbulb, Link2, ClipboardCheck } from "lucide-react";
+import {
+  Lightbulb,
+  Link2,
+  ClipboardCheck,
+  ArrowDownRight,
+} from "lucide-react";
 
 const syllabusPoints = [
   {
     number: "01",
     icon: Lightbulb,
-    title: "Understand the Concept",
-    text: "Learning goes beyond memorizing. Concepts are explained in ways that help students understand why something works.",
+    title: "Understand",
+    highlight: "Build clarity.",
+    text: "Understand concepts instead of simply memorizing facts.",
+    tag: "CONCEPT CLARITY",
   },
   {
     number: "02",
     icon: Link2,
-    title: "Connect With Real Life",
-    text: "Where relevant, concepts are connected to examples and situations beyond the textbook.",
+    title: "Connect",
+    highlight: "See the bigger picture.",
+    text: "Connect classroom concepts with examples from everyday life.",
+    tag: "REAL-WORLD LEARNING",
   },
   {
     number: "03",
     icon: ClipboardCheck,
-    title: "Prepare for the Examination",
-    text: "Learning stays aligned with syllabus requirements while supporting stronger preparation for board examinations.",
+    title: "Prepare",
+    highlight: "Learn with purpose.",
+    text: "Strengthen subject knowledge and prepare for board examinations.",
+    tag: "EXAM READINESS",
   },
 ];
 
@@ -25,54 +36,58 @@ export default function LearningSyllabus() {
   return (
     <section className="syllabus section" id="learning-syllabus">
       <div className="container">
-
-        <div className="syllabusIntro">
+        <div className="syllabusHeader">
           <div className="sectionBadge center">
             Learning Within the Syllabus
           </div>
 
           <h2>
-            Understand.
-            <span> Connect.</span>
+            From Understanding
             <br />
-            Prepare.
+            <span>to Application.</span>
           </h2>
 
           <p>
-            Learning stays connected to the syllabus while helping students
-            build deeper understanding and stronger examination readiness.
+            Meaningful learning begins with clarity, grows through
+            connections, and builds confidence for examinations.
           </p>
         </div>
 
-        <div className="learningJourney">
+        <div className="syllabusJourney">
           {syllabusPoints.map((item, index) => {
             const Icon = item.icon;
 
             return (
-              <div className="journeyItem" key={item.number}>
+              <article className="syllabusStep" key={item.number}>
+                <div className="syllabusStepTop">
+                  <span className="syllabusNumber">
+                    {item.number}
+                  </span>
 
-                <div className="journeyNumber">
-                  {item.number}
+                  <div className="syllabusIcon">
+                    <Icon size={23} strokeWidth={1.8} />
+                  </div>
                 </div>
 
-                <div className="journeyIcon">
-                  <Icon size={22} />
-                </div>
+                <div className="syllabusStepBody">
+                  <span className="syllabusTag">{item.tag}</span>
 
-                <div className="journeyContent">
                   <h3>{item.title}</h3>
+
+                  <h4>{item.highlight}</h4>
+
                   <p>{item.text}</p>
                 </div>
 
-                {index !== syllabusPoints.length - 1 && (
-                  <div className="journeyLine" />
+                {index < syllabusPoints.length - 1 && (
+                  <div className="syllabusArrow" aria-hidden="true">
+                    <ArrowDownRight size={20} />
+                  </div>
                 )}
-
-              </div>
+              </article>
             );
           })}
         </div>
-
       </div>
     </section>
   );

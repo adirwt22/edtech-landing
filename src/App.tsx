@@ -4,7 +4,12 @@ import DownloadApp from "./components/DownloadApp";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Footer from "./components/Footer";
+import AssessmentImprovement from "./components/AssessmentImprovement";
 import "./App.css";
+import FinalCTA from "./components/FinalCTA";
+import OurStory from "./components/OurStory";
+import LearningApproach from "./components/LearningApproach";
+import BeyondClassroom from "./components/BeyondClassroom";
 import LearningSyllabus from "./components/LearningSyllabus";
 import BoardPreparation from "./components/BoardPreparation";
 import AcademicExperience from "./components/AcademicExperience";
@@ -19,6 +24,8 @@ function App() {
         <DownloadApp />
 
         <About />
+         
+        <OurStory />
 
         <AcademicExperience />
 
@@ -26,7 +33,15 @@ function App() {
 
         <LearningSyllabus />
 
+        <AssessmentImprovement />
+
+        <BeyondClassroom />
+
+        <LearningApproach />
+
         <VisionMission />
+
+        <FinalCTA />
       </main>
 
       <Footer />

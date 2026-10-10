@@ -2,203 +2,259 @@
 
 .syllabus {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
 
-  padding: 120px 0;
-
-  background: #0f1117;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(108, 99, 255, 0.09),
+      transparent 48%
+    ),
+    #0f1117;
 }
 
-.syllabusIntro {
-  max-width: 760px;
-  margin: 0 auto;
+.syllabus .container {
+  position: relative;
+  z-index: 1;
+}
 
+/* Header */
+
+.syllabusHeader {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.syllabusIntro h2 {
-  margin: 22px 0 18px;
+.syllabusHeader h2 {
+  margin: 22px 0 16px;
 
+  color: #f4f4fc;
   font-family: "Archivo", sans-serif;
-  font-size: 52px;
-  line-height: 1.05;
-  letter-spacing: -2px;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
 }
 
-.syllabusIntro h2 span {
-  color: var(--primary);
+.syllabusHeader h2 span {
+  color: var(--primary, #6c63ff);
 }
 
-.syllabusIntro p {
-  max-width: 620px;
+.syllabusHeader p {
+  max-width: 580px;
   margin: 0 auto;
 
-  color: var(--muted);
+  color: var(--muted, #a4aec9);
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
+/* Journey layout */
 
-/* ================= JOURNEY ================= */
-
-.learningJourney {
-  max-width: 1100px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  margin: 75px auto 0;
-}
-
-.journeyItem {
+.syllabusJourney {
   position: relative;
 
-  min-height: 230px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 
-  padding: 0 35px;
+  max-width: 1080px;
+  margin: 64px auto 0;
 }
 
-.journeyItem:first-child {
-  padding-left: 0;
+/* Individual step */
+
+.syllabusStep {
+  position: relative;
+  min-width: 0;
+  min-height: 285px;
+
+  padding: 27px 26px;
+
+  border: 1px solid rgba(153, 161, 194, 0.16);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(31, 35, 51, 0.94),
+      rgba(19, 22, 31, 0.96)
+    );
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.journeyItem:last-child {
-  padding-right: 0;
+.syllabusStep:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(108, 99, 255, 0.5);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.16),
+    0 0 25px rgba(108, 99, 255, 0.05);
 }
 
+/* Top row */
 
-/* Number */
+.syllabusStepTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.journeyNumber {
-  margin-bottom: 18px;
-
-  color: var(--primary);
+.syllabusNumber {
+  color: rgba(180, 183, 212, 0.7);
 
   font-family: "Archivo", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
-
-/* Icon */
-
-.journeyIcon {
-  width: 54px;
-  height: 54px;
+.syllabusIcon {
+  width: 52px;
+  height: 52px;
 
   display: grid;
   place-items: center;
 
-  margin-bottom: 28px;
+  border: 1px solid rgba(108, 99, 255, 0.32);
+  border-radius: 16px;
 
-  border: 1px solid rgba(108, 99, 255, 0.35);
-  border-radius: 15px;
-
-  color: var(--primary);
-
-  background: rgba(108, 99, 255, 0.08);
+  color: #8980ff;
+  background: rgba(108, 99, 255, 0.11);
 }
 
+/* Text */
 
-/* Content */
+.syllabusStepBody {
+  margin-top: 34px;
+}
 
-.journeyContent h3 {
-  margin: 0 0 10px;
+.syllabusTag {
+  color: #8881ff;
 
-  color: #f1f2f8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
 
+.syllabusStep h3 {
+  margin: 10px 0 5px;
+
+  color: #f3f4fb;
   font-family: "Archivo", sans-serif;
-  font-size: 19px;
+  font-size: 24px;
+  line-height: 1.2;
 }
 
-.journeyContent p {
-  max-width: 280px;
+.syllabusStep h4 {
+  margin: 0 0 11px;
 
+  color: #bcb7ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.syllabusStep p {
+  max-width: 290px;
   margin: 0;
 
-  color: var(--muted);
-
-  font-size: 11px;
-  line-height: 1.75;
+  color: var(--muted, #a4aec9);
+  font-size: 12px;
+  line-height: 1.8;
 }
 
+/* Small transition marker */
 
-/* Connecting Line */
-
-.journeyLine {
+.syllabusArrow {
   position: absolute;
+  top: 50%;
+  right: -17px;
+  z-index: 2;
 
-  top: 28px;
-  right: -1px;
+  width: 32px;
+  height: 32px;
 
-  width: 70px;
-  height: 1px;
+  display: grid;
+  place-items: center;
 
-  background: linear-gradient(
-    90deg,
-    rgba(108, 99, 255, 0.45),
-    rgba(108, 99, 255, 0)
-  );
+  border: 1px solid rgba(108, 99, 255, 0.25);
+  border-radius: 50%;
+
+  color: #9c94ff;
+  background: #151823;
+
+  transform: translateY(-50%);
 }
 
-
-/* ================= HOVER ================= */
-
-.journeyItem:hover .journeyIcon {
-  border-color: rgba(0, 217, 166, 0.4);
-
-  color: var(--accent);
-
-  background: rgba(0, 217, 166, 0.08);
-}
-
-
-/* ================= RESPONSIVE ================= */
+/* Tablet */
 
 @media (max-width: 900px) {
-  .learningJourney {
-    grid-template-columns: 1fr;
-
-    max-width: 650px;
+  .syllabusJourney {
+    gap: 15px;
   }
 
-  .journeyItem,
-  .journeyItem:first-child,
-  .journeyItem:last-child {
-    min-height: auto;
-
-    padding: 0 0 45px;
+  .syllabusStep {
+    padding: 23px 19px;
   }
 
-  .journeyLine {
-    top: auto;
-    bottom: 20px;
-    left: 27px;
-    right: auto;
+  .syllabusStep h3 {
+    font-size: 21px;
+  }
 
-    width: 1px;
-    height: 25px;
-
-    background: linear-gradient(
-      180deg,
-      rgba(108, 99, 255, 0.45),
-      rgba(108, 99, 255, 0)
-    );
+  .syllabusArrow {
+    right: -14px;
+    width: 28px;
+    height: 28px;
   }
 }
 
-@media (max-width: 600px) {
-  .syllabus {
-    padding: 85px 0;
+/* Mobile */
+
+@media (max-width: 650px) {
+  .syllabusHeader h2 {
+    font-size: 35px;
+    letter-spacing: -1.1px;
   }
 
-  .syllabusIntro h2 {
-    font-size: 38px;
-    letter-spacing: -1.2px;
+  .syllabusHeader p {
+    font-size: 13px;
   }
 
-  .journeyItem {
-    padding-bottom: 40px;
+  .syllabusJourney {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  .syllabusStep {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .syllabusStepBody {
+    margin-top: 25px;
+  }
+
+  .syllabusStep p {
+    max-width: 100%;
+  }
+
+  .syllabusArrow {
+    top: auto;
+    right: 25px;
+    bottom: -25px;
+
+    transform: rotate(45deg);
+  }
+
+  .syllabusStep:last-child .syllabusArrow {
+    display: none;
   }
 }

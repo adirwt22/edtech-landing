@@ -7,10 +7,16 @@
 @import "./styles/academic.css";
 @import "./styles/board.css";
 @import "./styles/syllabus.css";
+@import "./styles/assessment.css";
+@import "./styles/beyond.css";
+@import "./styles/approach.css";
+@import "./styles/our-story.css";
 @import "./styles/vision.css";
 @import "./styles/download.css";
 @import "./styles/footer.css";
+@import "./styles/final-cta.css";
 @import "./styles/responsive.css";
+
 :root {
   --primary: #6c63ff;
   --secondary: #945ff1;

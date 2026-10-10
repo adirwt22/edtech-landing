@@ -1,10 +1,11 @@
+
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/sutra-edu-logo.svg";
 
 function Logo() {
   return (
-    <a href="#home" className="logo" aria-label="Sutra Edu">
+    <a href="#home" className="logo" aria-label="Sutra Edu Home">
       <img
         src={logo}
         alt="Sutra Edu"
@@ -24,54 +25,54 @@ function Logo() {
 export default function Header() {
   const [menu, setMenu] = useState(false);
 
-  const closeMenu = () => {
-    setMenu(false);
-  };
+  const closeMenu = () => setMenu(false);
+
+  const links = [
+    { label: "Home", href: "#home" },
+    { label: "About Us", href: "#about" },
+    { label: "Courses", href: "#academic-experience" },
+    { label: "Features", href: "#learning-approach" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <header className="header container">
-      {/* Logo */}
       <Logo />
 
-      {/* Desktop / Mobile Navigation */}
-      <nav className={menu ? "nav active" : "nav"}>
-        <a href="#home" onClick={closeMenu}>
-          Home
-        </a>
-
-        <a href="#about" onClick={closeMenu}>
-          About Us
-        </a>
-
-        <a href="#courses" onClick={closeMenu}>
-          Courses
-        </a>
-
-        <a href="#features" onClick={closeMenu}>
-          Features
-        </a>
-
-        <a href="#contact" onClick={closeMenu}>
-          Contact
-        </a>
+      <nav
+        className={menu ? "nav active" : "nav"}
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={closeMenu}
+          >
+            {link.label}
+          </a>
+        ))}
       </nav>
 
-      {/* Desktop CTA */}
-      <a
-        href="#contact"
-        className="button smallButton headerCTA"
-        onClick={closeMenu}
-      >
-        Get Started
-        <ArrowRight size={16} />
-      </a>
+      
+<a
+  href="#start-learning"
+  className="button smallButton headerCTA"
+  onClick={closeMenu}
+>
+  Get Started
+  <ArrowRight size={16} />
+</a>
 
-      {/* Mobile Menu Button */}
+
       <button
+        type="button"
         className="menuButton"
-        onClick={() => setMenu(!menu)}
+        onClick={() => setMenu((prev) => !prev)}
         aria-label={menu ? "Close menu" : "Open menu"}
         aria-expanded={menu}
+        aria-controls="main-navigation"
       >
         {menu ? <X size={25} /> : <Menu size={25} />}
       </button>

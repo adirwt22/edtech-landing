@@ -1,0 +1,137 @@
+
+/* ================= OUR STORY ================= */
+
+.ourStory {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 45%,
+      rgba(108, 99, 255, 0.07),
+      transparent 35%
+    ),
+    #0f1117;
+}
+
+.ourStoryGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ourStoryContent h2 {
+  margin: 22px 0 22px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(34px, 3.5vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.ourStoryContent h2 span {
+  color: var(--primary, #6c63ff);
+}
+
+.ourStoryContent > p {
+  margin: 0 0 15px;
+
+  color: var(--muted, #a4aec9);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Learning journey visual */
+
+.ourStoryVisual {
+  padding: 32px;
+
+  border: 1px solid var(--border, #292f40);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(29, 34, 48, 0.9),
+    rgba(19, 22, 31, 0.9)
+  );
+}
+
+.ourStoryLabel {
+  color: #8e87ff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.storyLine {
+  display: grid;
+  gap: 30px;
+
+  margin-top: 32px;
+}
+
+.storyPoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.storyDot {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  border-radius: 13px;
+
+  color: #aaa4ff;
+  background: rgba(108, 99, 255, 0.1);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.storyPoint h3 {
+  margin: 2px 0 7px;
+
+  color: #f1f2f8;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+}
+
+.storyPoint p {
+  margin: 0;
+
+  color: var(--muted, #a4aec9);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .ourStoryGrid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .ourStoryVisual {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ourStoryContent h2 {
+    font-size: 33px;
+    letter-spacing: -1px;
+  }
+}

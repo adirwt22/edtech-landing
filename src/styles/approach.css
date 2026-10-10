@@ -1,0 +1,144 @@
+/* ================= LEARNING APPROACH ================= */
+
+.approach {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(108, 99, 255, 0.07),
+      transparent 35%
+    ),
+    #11141c;
+}
+
+.approachHeader {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.approachHeader h2 {
+  margin: 20px 0 16px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.approachHeader h2 span {
+  color: var(--primary);
+}
+
+.approachHeader p {
+  max-width: 600px;
+  margin: 0 auto;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ================= CARDS ================= */
+
+.approachGrid {
+  max-width: 1050px;
+  margin: 55px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.approachCard {
+  min-height: 210px;
+
+  padding: 25px;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  background: rgba(29, 34, 48, 0.55);
+
+  transition: 0.25s ease;
+}
+
+.approachCard:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(108, 99, 255, 0.4);
+
+  background: rgba(29, 34, 48, 0.8);
+}
+
+.approachTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.approachTop > span {
+  color: #68718a;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.approachIcon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  border-radius: 12px;
+
+  color: var(--primary);
+  background: rgba(108, 99, 255, 0.08);
+}
+
+.approachCard h3 {
+  margin: 32px 0 9px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+}
+
+.approachCard p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .approachGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .approachHeader h2 {
+    font-size: 34px;
+  }
+
+  .approachHeader p {
+    font-size: 13px;
+  }
+
+  .approachGrid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .approachCard {
+    min-height: 180px;
+  }
+}

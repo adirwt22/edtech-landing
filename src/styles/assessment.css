@@ -1,0 +1,158 @@
+/* ================= ASSESSMENTS & IMPROVEMENT ================= */
+
+.assessment {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(0, 217, 166, 0.06),
+      transparent 32%
+    ),
+    #0f1117;
+}
+
+.assessmentHeader {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.assessmentHeader h2 {
+  margin: 20px 0 15px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.assessmentHeader h2 span {
+  color: var(--primary);
+}
+
+.assessmentHeader p {
+  max-width: 600px;
+  margin: 0 auto;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ================= FLOW ================= */
+
+.assessmentFlow {
+  max-width: 1000px;
+  margin: 65px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.assessmentStep {
+  position: relative;
+  padding: 0 38px;
+}
+
+.assessmentTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assessmentTop > span {
+  color: #555d72;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.assessmentIcon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(0, 217, 166, 0.25);
+  border-radius: 14px;
+
+  color: var(--accent);
+  background: rgba(0, 217, 166, 0.07);
+}
+
+.assessmentStep h3 {
+  margin: 35px 0 10px;
+
+  color: #f1f2f8;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 19px;
+}
+
+.assessmentStep p {
+  max-width: 245px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+
+/* Connector */
+
+.assessmentStep:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 24px;
+  right: 0;
+
+  width: 1px;
+  height: 45px;
+
+  background: var(--border);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+  .assessmentFlow {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .assessmentStep {
+    padding: 0;
+  }
+
+  .assessmentStep:not(:last-child)::after {
+    display: none;
+  }
+
+  .assessmentStep p {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .assessmentHeader h2 {
+    font-size: 34px;
+  }
+
+  .assessmentHeader p {
+    font-size: 13px;
+  }
+
+  .assessmentFlow {
+    margin-top: 45px;
+  }
+}

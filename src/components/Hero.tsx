@@ -200,25 +200,25 @@ export default function Hero() {
             you grow and succeed.
           </p>
 
-          <div className="hero-actions">
+          
+<div className="hero-actions">
+  <a
+    href="#academic-experience"
+    className="hero-primary-btn"
+  >
+    Explore Courses
+    <ArrowRight size={18} />
+  </a>
 
-            <a
-              href="#courses"
-              className="hero-primary-btn"
-            >
-              Explore Courses
-              <ArrowRight size={18} />
-            </a>
+  <a
+    href="#learning-approach"
+    className="hero-secondary-btn"
+  >
+    <PlayCircle size={18} />
+    Watch Demo
+  </a>
+</div>
 
-            <a
-              href="#features"
-              className="hero-secondary-btn"
-            >
-              <PlayCircle size={18} />
-              Watch Demo
-            </a>
-
-          </div>
 
           {/* Trust */}
           <div className="hero-trust">

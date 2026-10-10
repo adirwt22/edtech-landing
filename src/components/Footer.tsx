@@ -59,11 +59,13 @@ export default function Footer() {
         <div className="footerColumn">
           <h4>Quick Links</h4>
 
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#courses">Courses</a>
-          <a href="#features">Features</a>
-          <a href="#contact">Contact</a>
+           <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#our-story">Our Story</a>
+  <a href="#academic-experience">Courses</a>
+  <a href="#learning-approach">Features</a>
+  <a href="#vision">Our Vision & Mission</a>
+  <a href="#contact">Contact</a>
         </div>
 
         {/* Support */}
@@ -104,7 +106,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="copyright">
-        © 2026 Sutra Edu. All rights reserved.
+        © {new Date().getFullYear()} Sutra Edu. All rights reserved.
       </div>
     </footer>
   );

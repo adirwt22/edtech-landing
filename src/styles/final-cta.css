@@ -1,0 +1,184 @@
+
+/* ================= FINAL CALL TO ACTION ================= */
+
+.finalCta {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(108, 99, 255, 0.17),
+      transparent 48%
+    ),
+    #0f1117;
+}
+
+.finalCtaContent {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.finalCtaBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(108, 99, 255, 0.28);
+  border-radius: 30px;
+
+  color: #b9b4ff;
+  background: rgba(108, 99, 255, 0.08);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.finalCtaContent h2 {
+  margin: 27px 0 18px;
+
+  color: #f4f4fc;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.finalCtaContent h2 span {
+  color: var(--primary, #6c63ff);
+}
+
+.finalCtaDescription {
+  max-width: 590px;
+  margin: 0 auto;
+
+  color: var(--muted, #a4aec9);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* CTA buttons */
+
+.finalCtaActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.finalCtaActions a {
+  min-height: 49px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 10px;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.finalCtaPrimary {
+  color: #ffffff;
+  background: var(--primary, #6c63ff);
+  border: 1px solid var(--primary, #6c63ff);
+}
+
+.finalCtaPrimary:hover {
+  transform: translateY(-2px);
+  background: #5b52ed;
+}
+
+.finalCtaSecondary {
+  color: #e8e9f4;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border, #292f40);
+}
+
+.finalCtaSecondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary, #6c63ff);
+}
+
+/* Closing tagline */
+
+.finalCtaFooterLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  max-width: 850px;
+  margin: 75px auto 0;
+}
+
+.finalCtaFooterLine > span {
+  flex: 1;
+  height: 1px;
+  background: var(--border, #292f40);
+}
+
+.finalCtaFooterLine p {
+  margin: 0;
+
+  color: var(--muted, #a4aec9);
+  font-size: 11px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.finalCtaFooterLine strong {
+  color: #f1f2f8;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .finalCtaContent h2 {
+    font-size: 39px;
+    letter-spacing: -1.3px;
+  }
+
+  .finalCtaDescription {
+    font-size: 13px;
+  }
+
+  .finalCtaActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .finalCtaActions a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .finalCtaFooterLine {
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .finalCtaFooterLine p {
+    max-width: 260px;
+    font-size: 10px;
+  }
+}
